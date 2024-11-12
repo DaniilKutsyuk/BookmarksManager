@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark List</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Bookmark List</h1>
+
+        <ul>
+            {% for bookmark in bookmarks %}
+                <li>
+                    <a href="{{ bookmark.url }}" target="_blank">{{ bookmark.title }}</a>
+                    {% if bookmark.category %}
+                        <span>({{ bookmark.category }})</span>
+                    {% endif %}
+                    {% if bookmark.is_favorite %}
+                        <strong>⭐️</strong>
+                    {% endif %}
+                    <div class="bookmark-actions">
+                        <a href="{% url 'view_bookmark' bookmark.pk %}" class="btn view-btn">View</a>
+                        <a href="{% url 'update_bookmark' bookmark.pk %}" class="btn edit-btn">Edit</a>
+                        <a href="{% url 'delete_bookmark' bookmark.pk %}" class="btn delete-btn" onclick="return confirm('Are you sure you want to delete this bookmark?')">Delete</a>
+                    </div>
+                </li>
+            {% empty %}
+                <li>No bookmarks.</li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'create_bookmark' %}" class="btn add-btn">Create New Bookmark</a>
+    </div>
+</body>
+</html>
+

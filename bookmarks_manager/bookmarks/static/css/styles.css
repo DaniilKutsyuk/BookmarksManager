@@ -1,0 +1,188 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff8e1; /* Світло-жовтий фон */
+    color: #5a5a5a; /* Темно-сірий текст */
+    margin: 0;
+    padding: 0;
+}
+
+/* Основний контейнер */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Заголовки */
+h1, h2 {
+    color: #ff8f00; /* Помаранчевий */
+    text-align: center;
+}
+
+/* Стилі для списку закладок */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Лінки */
+a {
+    color: #ff8f00; /* Помаранчевий */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Кнопки */
+button {
+    background-color: #ff8f00; /* Помаранчевий */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e67800; /* Темніший відтінок помаранчевого */
+}
+
+/* Форми */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+form input, form select, form button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+form input:focus, form select:focus, form button:focus {
+    border-color: #ff8f00; /* Помаранчевий колір при фокусі */
+}
+
+/* Іконки для позначення улюблених закладок */
+strong {
+    color: #ff8f00;
+    font-size: 18px;
+}
+
+/* Стилі для сторінки детального перегляду закладки */
+.view-bookmark {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.view-bookmark p {
+    font-size: 18px;
+}
+
+.view-bookmark a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ff8f00; /* Помаранчевий */
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.view-bookmark a:hover {
+    background-color: #e67800; /* Темніший відтінок помаранчевого */
+}
+
+/* Сторінка помилки 404 */
+.error-page {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.error-page h2 {
+    font-size: 36px;
+    color: #ff8f00; /* Помаранчевий */
+}
+
+/* Стилі для кнопок дій з закладками */
+.bookmark-actions {
+    margin-top: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.view-btn {
+    background-color: #ff8f00; /* Помаранчевий */
+}
+
+.view-btn:hover {
+    background-color: #e67800; /* Темніший відтінок помаранчевого */
+}
+
+.edit-btn {
+    background-color: #ffb74d; /* Світло-помаранчевий */
+}
+
+.edit-btn:hover {
+    background-color: #f57c00; /* Темніший відтінок помаранчевого */
+}
+
+.delete-btn {
+    background-color: #ff7043; /* Помаранчево-червоний */
+}
+
+.delete-btn:hover {
+    background-color: #e64a19; /* Темніший відтінок червоного */
+}
+
+.add-btn {
+    background-color: #ffb300; /* Жовто-помаранчевий */
+    margin-top: 20px;
+}
+
+.add-btn:hover {
+    background-color: #f57c00; /* Темніший відтінок помаранчевого */
+}
+
+/* Новий стиль для кнопки "Назад до списку закладок" */
+.back-btn {
+    background-color: #FFA500; /* Яскраво помаранчевий */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #ff8c00; /* Темніший помаранчевий при наведенні */
+}

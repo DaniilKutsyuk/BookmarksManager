@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Bookmark</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container view-bookmark">
+        <h1>{{ bookmark.title }}</h1>
+        <p>URL: <a href="{{ bookmark.url }}" target="_blank">{{ bookmark.url }}</a></p>
+        <p>Category: {{ bookmark.category }}</p>
+        <p>Favorite: {% if bookmark.is_favorite %}Yes{% else %}No{% endif %}</p>
+        <a href="{% url 'bookmark_list' %}">Back to Bookmark List</a>
+    </div>
+</body>
+</html>
